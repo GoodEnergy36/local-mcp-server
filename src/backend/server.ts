@@ -47,10 +47,6 @@ app.get("/", async (_req, res) => {
     scope,
   }).toString();
 
-  console.log("AUTH URL:", authUrl.toString());
-  console.log("EFFECTIVE CLIENT_ID =", JSON.stringify(process.env.SPOTIFY_CLIENT_ID));
-  console.log("EFFECTIVE REDIRECT_URI =", JSON.stringify(REDIRECT_URI));
-
   res.redirect(authUrl.toString());
 });
 

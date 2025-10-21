@@ -28,7 +28,7 @@ export async function exchangeCodeForTokens(
   }
 
   const tokens = await r.json();
-  console.log("Received tokens:", tokens);
+
   TokensSchema.parse(tokens);
   
   return tokens;
